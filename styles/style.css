@@ -1,0 +1,131 @@
+body {
+	font-family: open_sanslight, sans-serif;
+	background: #e9e9e9;
+	font-size: 18px;
+	color: #fff;
+}
+.clearfix::after {
+	content: "";
+	display: table;
+	width: 100%;
+	clear: both;
+}
+.container {
+	max-width: 920px; 
+	padding: 20px 0;
+	margin: 0 auto;
+}
+.bar {
+	color: black;
+	padding-left: 10px;
+}
+.bar:hover + .menu{
+	display: block;
+}
+.menu {
+	display: none;
+}
+.header {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	background: #52bbde;
+	color: #fff;	
+	border-radius: 5px;
+}
+.submenu-link {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.menu-list,
+.submenu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.menu-link,
+.submenu-link {
+	text-decoration: none;
+	display: block;
+	color: inherit;
+	padding: 16px 17px;
+}
+.menu-link {
+	font-size: 24px;
+}
+.submenu-link {
+	font-size: 18px;
+}
+.submenu {
+	display: none;
+}
+.menu-link:hover + .submenu {
+	display: block;
+}
+.menu-item:hover + .submenu {
+	display: block;
+}
+.bg-menu-link:hover {
+	background: #4292ad;
+}
+.car-img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+@media screen and (min-width: 900px) {
+	.menu {
+		float: left;
+		display: block;
+	}
+	.bar {
+		display: none;
+	}
+	.menu-item {
+		display: inline-block;
+		position: relative;
+	}
+	.menu-link {
+		padding: 16px 20px;
+		transition: all 0.3s;
+	}
+	.bg-menu-link:hover::after {
+		content: "";
+		height: 0;
+		width: 0;
+		position: absolute;
+		top: 29px;
+		right: 5px;
+		display: inline-block;
+		border-style: solid;
+		border-width: 6px 4px 0 4px;
+		border-color: #fff transparent transparent transparent;
+	}
+	.menu-link:hover {
+		background: #4292ad;
+	}
+	.submenu {
+		position: absolute;
+		min-width: 200px;
+		z-index: 2;
+		background: #4292ad;
+		transition: all 0.3s;
+	}	
+	.submenu:hover {
+		display: block;
+	}
+	.submenu-item:hover {
+		color: #1b3e4a;
+		background: #61a5bc;
+	}
+	.menu-link {
+		position: relative;
+		border-right: 1px solid #44a3bf;
+		box-shadow: 1px 0 0 0 #75c9e5;
+	} 
+	.menu-link:last-child {
+		border-right: 0;
+		box-shadow: 0;
+	}
+}
+.triangle {}
+
